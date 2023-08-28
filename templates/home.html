@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budget Prediction</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budget Prediction</h1>
+      <form action="{{ url_for('predict') }}" method="post">
+        <p>Welcome to the Budget Prediction App!</p>
+        <p>
+          Enter your income, expenses, and savings goal to get a prediction of
+          your potential savings.
+        </p>
+        <label for="income">Income:</label>
+        <input type="text" name="income" id="income" required />
+        <br />
+        <label for="rent">Rent:</label>
+        <input type="text" name="rent" id="rent" required />
+        <br />
+        <label for="utilities">Utilities:</label>
+        <input type="text" name="utilities" id="utilities" />
+        <br />
+        <label for="groceries">Groceries:</label>
+        <input type="text" name="groceries" id="groceries" />
+        <br />
+        <label for="transportation">Transportation:</label>
+        <input type="text" name="transportation" id="transportation" />
+        <br />
+        <label for="entertainment">Entertainment:</label>
+        <input type="text" name="entertainment" id="entertainment" />
+        <br />
+        <label for="goal">Savings Goal:</label>
+        <input type="text" name="goal" id="goal" required />
+        <br />
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

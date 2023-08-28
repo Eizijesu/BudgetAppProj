@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budget Prediction</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Budget Prediction</h1>
+
+    <div class="container">
+      <div id="result" style="display: none">
+        <h2>Prediction Result</h2>
+        <p>Predicted Savings: $<span id="predicted-savings"></span></p>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
